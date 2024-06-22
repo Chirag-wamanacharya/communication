@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "public/api/*.js", "use": "@vercel/node" },
+      { "src": "public/**/*.html", "use": "@vercel/static-build" },
+      { "src": "public/styles/**/*.css", "use": "@vercel/static-build" },
+      { "src": "public/scripts/**/*.js", "use": "@vercel/static-build" }
+    ],
+    "routes": [
+      { "src": "/api/sendOtp", "dest": "/public/api/sendOtp.js" },
+      { "src": "/api/verifyOtp", "dest": "/public/api/verifyOtp.js" },
+      { "src": "/(.*)", "dest": "/public/$1" }
+    ]
+  }
+  

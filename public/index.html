@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call Web App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Video Call Web App</h1>
+    </header>
+
+    <main>
+        <section id="otpSection">
+            <h2>OTP Verification</h2>
+            <form id="otpForm">
+                <label for="mobileNumber">Enter Mobile Number:</label>
+                <input type="text" id="mobileNumber" name="mobileNumber" required pattern="[0-9]{10}">
+                <button type="button" id="sendOtpButton">Send OTP (SMS)</button>
+                <br>
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="button" id="sendOtpEmailButton">Send OTP (Email)</button>
+                <br>
+                <label for="otp">Enter OTP (SMS):</label>
+                <input type="text" id="otp" name="otp" required pattern="[0-9]{6}">
+                <button type="button" id="verifyOtpButton">Verify OTP (SMS)</button>
+                <br>
+                <label for="otpEmail">Enter OTP (Email):</label>
+                <input type="text" id="otpEmail" name="otpEmail" required pattern="[0-9]{6}">
+                <button type="button" id="verifyOtpEmailButton">Verify OTP (Email)</button>
+            </form>
+        </section>
+
+        <section id="callSection" style="display: none;">
+            <h2>Video Call Options</h2>
+            <button type="button" id="startVideoCallButton">Start Video Call</button>
+            <button type="button" id="startVoiceCallButton">Start Voice Call</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Video Call Web App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
